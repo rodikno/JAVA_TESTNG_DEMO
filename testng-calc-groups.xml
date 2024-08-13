@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CalculatorSuite">
+    <test name="PositiveTests">
+        <groups>
+            <run>
+                <include name="addSubtract"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="CalculatorGroupsTest"/>
+        </classes>
+    </test>
+    <test name="NegativeTests">
+        <groups>
+            <run>
+                <exclude name="addSubtract"/>
+                <include name="addSubtractNegative"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="CalculatorGroupsTest"/>
+        </classes>
+    </test>
+</suite>

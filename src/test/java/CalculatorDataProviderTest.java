@@ -31,7 +31,7 @@ public class CalculatorDataProviderTest {
         calculator = new Calculator();
 
     }
-
+/////////////////////////////////
     @Test(dataProvider = "testDataAddition")
     public void testAdd(int a, int b, int expected) {
         int result = calculator.add(a, b);
@@ -43,7 +43,7 @@ public class CalculatorDataProviderTest {
         int result = calculator.subtract(a, b);
         assertEquals(result, expected, String.format("%s - %s повинно дорівнювати %s", a, b, result));
     }
-
+//////////////////////////////////////
     @AfterClass
     public void tearDown() {
         System.out.println("All tests in this class were completed");

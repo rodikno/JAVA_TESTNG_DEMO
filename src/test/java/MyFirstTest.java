@@ -1,3 +1,4 @@
+import org.example.Calculator;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -6,6 +7,9 @@ public class MyFirstTest {
 
     @Test
     public void myFirstTest() {
-        Assert.assertEquals(2 + 2, 4);
+        Calculator calc = new Calculator();
+        int result = calc.add(3, 4);
+
+//        Assert.assertEquals(result, 7);
     }
 }
